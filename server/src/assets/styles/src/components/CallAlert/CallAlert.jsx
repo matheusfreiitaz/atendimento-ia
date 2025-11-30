@@ -7,7 +7,7 @@ const CallAlert = () => {
   const { alert } = useCallContext();
   const [isVisible, setIsVisible] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
-
+ 
   useEffect(() => {
     if (alert) {
       setIsVisible(true);
@@ -68,3 +68,4 @@ const CallAlert = () => {
 
 
 export default CallAlert;
+
