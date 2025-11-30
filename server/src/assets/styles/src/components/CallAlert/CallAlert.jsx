@@ -3,7 +3,7 @@ import styles from './CallAlert.module.scss';
 import { useCallContext } from '../../context/CallContext';
 import Icon from '../Icon';
 
-const CallAlert = () => {
+const CallAlert = () => { 
   const { alert } = useCallContext();
   const [isVisible, setIsVisible] = useState(false);
   const [isExiting, setIsExiting] = useState(false);
@@ -65,5 +65,6 @@ const CallAlert = () => {
     </div>
   );
 };
+
 
 export default CallAlert;
