@@ -12,7 +12,7 @@ export const CallProvider = ({ children }) => {
   const [callsHistory, setCallsHistory] = useState([]);
 
   const startCall = async (mock = false) => {
-    const callId = `call-${Date.now()}`;
+    const callId = `call-${Date.now()}`; 
     const newCall = callAnalyzer.startCall(callId);
     
     setCurrentCall(newCall);
