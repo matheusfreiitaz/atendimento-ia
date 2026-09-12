@@ -2,7 +2,7 @@
 
 Projeto desenvolvido com o objetivo de aprimorar e consolidar os conhecimentos avançados em **Laravel**, abrangendo o desenvolvimento de APIs RESTful estruturadas, controle de requisições, middlewares customizados, testes automatizados e containerização com Docker.
 
----
+
 
 ##  Tecnologias e Ferramentas Utilizadas
 
@@ -13,7 +13,7 @@ Projeto desenvolvido com o objetivo de aprimorar e consolidar os conhecimentos a
 - **Containerização:** Docker & Docker Compose
 - **Testes:** PHPUnit / Pest (Testes de Feature)
 
----
+
 
 ##  Funcionalidades do Sistema
 
@@ -24,7 +24,7 @@ Projeto desenvolvido com o objetivo de aprimorar e consolidar os conhecimentos a
 - **Testes Automatizados:** Cobertura de testes de feature focados em garantir a integridade dos fluxos críticos (ex: Pedidos).
 - **Ambiente Dockerizado:** Pronto para subir com apenas um comando, sem complicações com dependências locais.
 
----
+
 
 ##  Estrutura do Projeto
 
