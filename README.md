@@ -1,10 +1,10 @@
-# 🚀 Sistema de Estudos Laravel (API REST & Dashboard)
+#  Sistema de Estudos Laravel (API REST & Dashboard)
 
 Projeto desenvolvido com o objetivo de aprimorar e consolidar os conhecimentos avançados em **Laravel**, abrangendo o desenvolvimento de APIs RESTful estruturadas, controle de requisições, middlewares customizados, testes automatizados e containerização com Docker.
 
 ---
 
-## 🛠️ Tecnologias e Ferramentas Utilizadas
+##  Tecnologias e Ferramentas Utilizadas
 
 - **PHP 8.2+**
 - **Laravel 10/11**
@@ -15,7 +15,7 @@ Projeto desenvolvido com o objetivo de aprimorar e consolidar os conhecimentos a
 
 ---
 
-## ⚙️ Funcionalidades do Sistema
+##  Funcionalidades do Sistema
 
 - **API RESTful Versionada (v1):** Endpoints completos para gerenciamento de Categorias, Produtos e Pedidos.
 - **Form Requests & Resources:** Validação estrita de dados de entrada e transformação limpa das respostas JSON.
@@ -26,7 +26,7 @@ Projeto desenvolvido com o objetivo de aprimorar e consolidar os conhecimentos a
 
 ---
 
-## 📁 Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```text
 sistema-estudo-laravel/
