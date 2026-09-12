@@ -1,0 +1,95 @@
+{
+  "info": {
+    "name": "Sistema Estudo Laravel",
+    "description": "Coleção para estudar rotas e API do projeto Laravel (categorias e produtos).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:8000/api/v1" }
+  ],
+  "item": [
+    {
+      "name": "Status da API",
+      "request": { "method": "GET", "url": "{{base_url}}/status" }
+    },
+    {
+      "name": "Categorias - Listar",
+      "request": { "method": "GET", "url": "{{base_url}}/categorias?com_produtos=true" }
+    },
+    {
+      "name": "Categorias - Criar",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/categorias",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Games\",\n  \"descricao\": \"Jogos e acessórios\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Categorias - Detalhar",
+      "request": { "method": "GET", "url": "{{base_url}}/categorias/1" }
+    },
+    {
+      "name": "Categorias - Atualizar",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/categorias/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Informática Atualizada\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Categorias - Remover",
+      "request": { "method": "DELETE", "url": "{{base_url}}/categorias/4" }
+    },
+    {
+      "name": "Produtos - Listar (com filtros)",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/produtos?nome=produto&preco_min=10&preco_max=200&ordenar_por=preco&direcao=desc&por_pagina=5"
+      }
+    },
+    {
+      "name": "Produtos - Criar",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/produtos",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoria_id\": 1,\n  \"sku\": \"SKU-99999\",\n  \"nome\": \"Teclado mecânico\",\n  \"descricao\": \"Teclado para testes\",\n  \"preco\": 199.90,\n  \"estoque\": 15\n}"
+        }
+      }
+    },
+    {
+      "name": "Produtos - Detalhar",
+      "request": { "method": "GET", "url": "{{base_url}}/produtos/1" }
+    },
+    {
+      "name": "Produtos - Atualizar",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/produtos/1",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"categoria_id\": 1,\n  \"sku\": \"SKU-00001\",\n  \"nome\": \"Produto renomeado\",\n  \"preco\": 55.00,\n  \"estoque\": 20\n}"
+        }
+      }
+    },
+    {
+      "name": "Produtos - Remover",
+      "request": { "method": "DELETE", "url": "{{base_url}}/produtos/1" }
+    },
+    {
+      "name": "Categorias - Produtos de uma categoria",
+      "request": { "method": "GET", "url": "{{base_url}}/categorias/1/produtos" }
+    }
+  ]
+}

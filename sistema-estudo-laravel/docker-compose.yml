@@ -1,0 +1,56 @@
+# docker-compose.yml
+# Objetivo didático: simular um ambiente de "nuvem" na sua máquina.
+# 3 containers = 3 peças que, em produção, normalmente ficariam em
+# serviços gerenciados separados (ex: RDS para o MySQL, Atlas para o Mongo,
+# ECS/EC2/Elastic Beanstalk para a aplicação).
+services:
+  app:
+    build: .
+    container_name: estudo_app
+    working_dir: /var/www
+    volumes:
+      - ./:/var/www
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mysql
+      - mongodb
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+  mysql:
+    image: mysql:8.0
+    container_name: estudo_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: estudo_laravel
+      MYSQL_USER: estudo
+      MYSQL_PASSWORD: estudo123
+      MYSQL_ROOT_PASSWORD: root123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  mongodb:
+    image: mongo:7.0
+    container_name: estudo_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: estudo_mongo_express
+    restart: unless-stopped
+    environment:
+      ME_CONFIG_MONGODB_SERVER: mongodb
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongodb
+
+volumes:
+  mysql_data:
+  mongo_data:
