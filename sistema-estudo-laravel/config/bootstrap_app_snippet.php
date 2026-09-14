@@ -3,7 +3,7 @@
  * NÃO é um arquivo para rodar sozinho.
  * No Laravel 11, o registro de middlewares fica em bootstrap/app.php.
  * Adicione o LogApiRequests dentro do grupo "api", assim:
- */
+ */ 
 
 use App\Http\Middleware\LogApiRequests;
 
