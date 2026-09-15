@@ -5,7 +5,7 @@
  * Adicione o LogApiRequests dentro do grupo "api", assim:
  */ 
 
-use App\Http\Middleware\LogApiRequests;
+use App\Http\Middleware\LogApiRequests; 
 
 return Illuminate\Foundation\Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
